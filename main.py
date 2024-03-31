@@ -18,8 +18,8 @@ parser = argparse.ArgumentParser(
         description="이 프로그램은 스몰톡톡 세션을 진행하기 전에 인원들을 랜덤으로 배치하기 위해 만들어졌습니다.",
         epilog="^___^b")
 
-parser.add_argument("--names", type=str, help="whitespace-separated, surrounded by quotation mark", default="")
-parser.add_argument("--count", type=int, help="group size", default=3)
+parser.add_argument("--names", type=str, help="whitespace-separated, surrounded by quotation mark", required=True)
+parser.add_argument("--count", type=int, help="group size", required=True)
 
 args = parser.parse_args()
 
