@@ -7,6 +7,7 @@
 python main.py -h
 ```
 
+```
 usage: human_placement [-h] --names NAMES --count COUNT
 
 이 프로그램은 스몰톡톡 세션을 진행하기 전에 인원들을 랜덤으로 배치하기 위해 만들어졌습니다.
@@ -17,3 +18,4 @@ options:
   --count COUNT  group size
 
 ^___^b
+```
