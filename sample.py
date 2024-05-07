@@ -45,23 +45,30 @@ parser.add_argument(
 )
 parser.add_argument("--count", type=int, help="group size", required=True)
 parser.add_argument("--markdown", action="store_true")
+parser.add_argument("--csv", action="store_true")
 
 args = parser.parse_args()
 names = args.names.strip().split(" ")
 is_markdown = args.markdown
+is_csv = args.csv
 
 COUNT = args.count
 NUMBER_OF_GROUP = math.ceil(len(names) / COUNT)
 
 # 랜덤으로 인원을 섞습니다
-names = [str(i) for i in range(1, COUNT + 1)] + random.sample(names, len(names))
-
-# 이차원 배열로 변환합니다
-names = [names[i : i + COUNT] for i in range(0, len(names), COUNT)]
+names = random.sample(names, len(names))
 
 if is_markdown:
 
+    names = [str(i) for i in range(1, COUNT + 1)] + names
+    # 이차원 배열로 변환합니다
+    names = [names[i : i + COUNT] for i in range(0, len(names), COUNT)]
+
     print(make_markdown_table(names))
+
+elif is_csv:
+
+    pass  # TODO - 2차원 리스트 csv 변환하기
 
 else:
 
