@@ -48,7 +48,7 @@ parser.add_argument("--markdown", action="store_true")
 parser.add_argument("--csv", action="store_true")
 
 args = parser.parse_args()
-names = args.names.strip().split(" ")
+names = args.names.strip().split()
 is_markdown = args.markdown
 is_csv = args.csv
 
