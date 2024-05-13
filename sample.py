@@ -19,14 +19,14 @@ def make_markdown_table(array):
     nl = "\n"
 
     markdown = nl
-    markdown += f"| {' | '.join(array[0])} |"
+    markdown += f"| 그룹번호 | {' | '.join(array[0])} |"
 
     markdown += nl
-    markdown += f"| {' | '.join(['---']*len(array[0]))} |"
+    markdown += f"| --- | {' | '.join(['---']*len(array[0]))} |"
 
     markdown += nl
-    for entry in array[1:]:
-        markdown += f"| {' | '.join(entry)} |{nl}"
+    for i, entry in enumerate(array[1:]):
+        markdown += f"| {i} | {' | '.join(entry)} |{nl}"
 
     return markdown
 
@@ -57,10 +57,11 @@ NUMBER_OF_GROUP = math.ceil(len(names) / COUNT)
 
 # 랜덤으로 인원을 섞습니다
 names = random.sample(names, len(names))
+names.append("" * (NUMBER_OF_GROUP % COUNT))
 
 if is_markdown:
 
-    names = [str(i) for i in range(1, COUNT + 1)] + names
+    names = [str(i) for i in range(COUNT)] + names
     # 이차원 배열로 변환합니다
     names = [names[i : i + COUNT] for i in range(0, len(names), COUNT)]
 

@@ -22,6 +22,17 @@ options:
 ^___^b
 ```
 
+> 예시
+
+```
+python3 sample.py --names "a b c d e" --count 3 --markdown
+
+| 그룹번호 | 0 | 1 | 2 |
+| --- | --- | --- | --- |
+| 0 | a | c | d |
+| 1 | b | e |  |
+```
+
 ## groups.py
 
 ```
