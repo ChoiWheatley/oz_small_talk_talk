@@ -25,7 +25,10 @@ options:
 > 예시
 
 ```
-python sample.py --names "다은 기은 길동 황동 과동 승현 재현 우현 재윤 다윤 가윤 라윤 마윤 으악 이름 정하 는게 너무 어려 워요" --count 3 --markdown
+python sample.py \
+  --names "다은 기은 길동 황동 과동 승현 재현 우현 재윤 다윤 가윤 라윤 마윤 으악 이름 정하 는게 너무 어려 워요" \
+  --count 3 \
+  --markdown
 ```
 
 | 그룹 \ 멤버 | member 0 | member 1 | member 2 |
@@ -39,7 +42,10 @@ python sample.py --names "다은 기은 길동 황동 과동 승현 재현 우�
 | group 6 | 재윤 | 다은 |  |
 
 ```
-python sample.py --names "다은 기은 길동 황동 과동 승현 재현 우현 재윤 다윤 가윤 라윤 마윤 으악 이름 정하 는게 너무 어려 워요" --count 3 --csv
+python sample.py \
+  --names "다은 기은 길동 황동 과동 승현 재현 우현 재윤 다윤 가윤 라윤 마윤 으악 이름 정하 는게 너무 어려 워요" \
+  --count 3 \
+  --csv
 
 그룹\멤버,member0,member1,member2
 group0,너무,과동,으악
