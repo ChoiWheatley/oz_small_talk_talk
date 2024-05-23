@@ -38,6 +38,19 @@ python sample.py --names "다은 기은 길동 황동 과동 승현 재현 우�
 | group 5 | 우현 | 으악 | 가윤 |
 | group 6 | 재윤 | 다은 |  |
 
+```
+python sample.py --names "다은 기은 길동 황동 과동 승현 재현 우현 재윤 다윤 가윤 라윤 마윤 으악 이름 정하 는게 너무 어려 워요" --count 3 --csv
+
+그룹\멤버,member0,member1,member2
+group0,너무,과동,으악
+group1,정하,어려,기은
+group2,마윤,재현,재윤
+group3,는게,이름,가윤
+group4,황동,우현,길동
+group5,다윤,라윤,다은
+group6,승현,워요,
+```
+
 ## groups.py
 
 ```
